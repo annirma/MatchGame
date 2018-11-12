@@ -1,0 +1,99 @@
+﻿body {
+    background-color: #F2F2F2;
+    margin: 30px;
+    font-family: 'Cabin', sans-serif;
+}
+
+
+main {
+    height: 320px;
+    background-color: #8CBCB9;
+}
+
+main div {
+    position: absolute;
+}
+
+
+a {
+    color: #7F7F7F;
+}
+
+h1,h3,h4,h5 {
+    color: #38515D;
+}
+
+h1 {
+    background-color: #E0B570;
+}
+
+#deck {
+    
+    position: absolute;
+    top: 230px;
+    left: 140px;
+    width: 200px;
+    height: 100px;
+}
+
+#player {
+    position: absolute;
+    top: 230px;
+    left: 340px;
+    width: 200px;
+    height: 100px;
+}
+
+#computer {
+    position: absolute;
+    top: 230px;
+    left: 540px;
+    width: 200px;
+    height: 100px;
+}
+
+#discard {
+    position: absolute;
+    top: 230px;
+    left: 740px;
+    width: 200px;
+    height: 100px;
+}
+
+#buttons {
+    position: absolute;
+    top: 550px;
+    left: 300px;
+    width: 400px;
+    height: 100px;
+}
+
+#table {
+    position: absolute;
+    top: 600px;
+    left: 30px;
+    width: 1000px;
+    height: 1000px;
+}
+
+nav {
+    margin: 20px;
+}
+
+table {
+    background-color: #C4D3D0;
+    margin: 20px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+
+        
+
