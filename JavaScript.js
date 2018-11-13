@@ -45,20 +45,43 @@ function Deal(theDeck) {
 let dealtCards = Deal(deck);
 console.log(dealtCards);
 
-function ComputerDrawsCard(allComputerCards) {
-    return allComputerCards.pop();
+let theGame = {
+    score: 0
+};
+
+function ComputerDrawsCard(allComputerCards, cardDrawnFunction) {
+    setTimeout(function () {
+        let theCard = allComputerCards.pop();
+
+        cardDrawnFunction(theCard);
+
+    }, 1500);
 }
 
-let theComputerCard = ComputerDrawsCard(dealtCards.computerCards);
+function PlayerDrawsCard(allPlayerCards, playerDrawnFunction) {
+    setTimeout(function () {
+        let theCard = allPlayerCards.pop();
 
-function PlayerDrawsCard(allPlayerCards) {
-    return allPlayerCards.pop();
+        playerDrawnFunction(theCard);
+
+    }, 2500);
 }
 
-let thePlayerCard = PlayerDrawsCard(dealtCards.playerCards);
+ComputerDrawsCard(
+    dealtCards.computerCards,
+    function (theCard) {
+        console.log('this is where the card shows up! ' + theCard);
+        theGame.currentComputerCard = theCard;
+    });
 
-console.log(theComputerCard);
-console.log(thePlayerCard);
+PlayerDrawsCard(
+    dealtCards.playerCards,
+    function (theCard) {
+        console.log('this is where the card shows up! ' + theCard);
+        theGame.score += ScoreCards(theCard, theGame.currentComputerCard);
+        console.log(theGame.score);
+    });
+
 
 function ScoreCards(card1, card2) {
     let value1 = card1.charAt(0);
@@ -71,27 +94,5 @@ function ScoreCards(card1, card2) {
     else return -1;
 }
 
-let score = 0;
 
-for (var i = 0; i < 4; i++) {
-
-    theComputerCard = ComputerDrawsCard(dealtCards.computerCards);
-    thePlayerCard = PlayerDrawsCard(dealtCards.playerCards);
-    let scoreDelta = ScoreCards(thePlayerCard, theComputerCard);
-
-    score += scoreDelta;
-
-    console.log(scoreDelta);
-    console.log("Total score: " + score);
-
-}
-
-//let computerCards = deck.slice(0, 26);
-//let playerCards = deck.slice(26, 52);
-
-//playerDeck.forEach(
-//    function (item) {
-//        console.log(item)
-//    }
-//);
 
