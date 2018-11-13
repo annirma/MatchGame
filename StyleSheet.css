@@ -16,15 +16,18 @@ main div {
 
 
 a {
-    color: #7F7F7F;
+    color: #192819;
 }
 
 h1,h3,h4,h5 {
     color: #38515D;
 }
 
-h1 {
+nav {
     background-color: #E0B570;
+    margin: 0px;
+    height: 40px;
+    
 }
 
 #deck {
@@ -76,9 +79,6 @@ h1 {
     height: 1000px;
 }
 
-nav {
-    margin: 20px;
-}
 
 table {
     background-color: #C4D3D0;
