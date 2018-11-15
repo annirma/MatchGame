@@ -8,14 +8,26 @@
 main {
     height: 340px;
     background-color: #8CBCB9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
-main div {
+/*main div {
     position: absolute;
-}
+}*/
 
 a {
     color: #192819;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Spicy Rice', cursive;
+    font-size: 50px;
 }
 
 h1,h3,h4,h5 {
@@ -26,73 +38,104 @@ nav {
     background-color: #E0B570;
     margin: 0px;
     height: 30px;
-    
+    text-align: center;
+    border-radius: 10px;
+}
+
+section {
+    text-align: center;
 }
 
 #deck {
     
-    position: absolute;
-    top: 230px;
+    /*position: absolute;
+    /*top: 250px;
     left: 140px;
     width: 200px;
-    height: 100px;
+    height: 100px;*/*/
 }
 
 #player {
+    /*position: absolute;
+    /*top: 250px;
+    left: 400px;
+    width: 200px;
+    height: 100px;*/*/
+}
+
+#player:hover {
+    transform: rotate(-5deg) scale(1.05);
+    transition: transform 1s;
+    
+}
+
+.rotated {
+    transform: rotate(360deg);
+    transition: transform 1s;
+}
+
+#played {
+    color: #7A2B28 !important;
     position: absolute;
-    top: 230px;
-    left: 340px;
+    top: 510px;
+    left: 460px;
     width: 200px;
     height: 100px;
 }
 
 #computer {
-    position: absolute;
-    top: 230px;
-    left: 540px;
+    /*position: absolute;
+    /*top: 250px;
+    left: 660px;
     width: 200px;
-    height: 100px;
+    height: 100px;*/*/
 }
 
 #discard {
-    position: absolute;
-    top: 230px;
-    left: 740px;
+    /*position: absolute;
+    /*top: 250px;
+    left: 920px;
     width: 200px;
-    height: 100px;
+    height: 100px;*/*/
 }
 
 #buttons {
-    position: absolute;
-    top: 550px;
-    left: 300px;
-    width: 400px;
-    height: 100px;
+    /*position: absolute;
+    top: 290px;
+    left: 1200px;
+    width: 300px;
+    height: 100px;*/
+}
+
+button {
+    border-radius: 2px;
+    text-align: center;
 }
 
 #table {
     position: absolute;
     top: 600px;
-    left: 30px;
+    left: 430px;
     width: 1000px;
     height: 1000px;
 }
 
 
 table {
-    background-color: #C4D3D0;
+    background-color: #F4E5A4;
     margin: 20px;
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 60%;
+    border: 1px solid saddlebrown;
 }
 
 td, th {
-    border: 1px solid #dddddd;
+    //border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    border-bottom: 1px solid saddlebrown;
 }
-
 
         
 

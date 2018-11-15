@@ -3,11 +3,15 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" />
     <title>Match Cards</title>
     <link rel="stylesheet " type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.css">
     <link rel="stylesheet " type="text/css" href="StyleSheet.css" />
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
-   
+    <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
     <style>
     </style>
 </head>
@@ -15,46 +19,50 @@
     <h1>Match Cards</h1>
     <header>
         <nav>
-            <a href="url">Play</a>
-            <a href="url">Saved Games</a>
+            <a href="url">Play    </a>
+            <a href="url">Saved Games    </a>
+            <a href="Feedback.html">Register here!</a>
         </nav>
         <section>
-           
-            <div id="basicUsage"><h3>Timer: 00:00:00</h3></div>
-            <h4>Score:</h4>
+
+            <h4>Timer: <time></time> </h4>
+
+            <h4>Score: <span id="score">0</span></h4>
         </section>
     </header>
 
     <main>
 
-        <div id="deck">
+        <div id="deck" class="mainCard">
             <h5>Deck</h5>
             <img src="cardbackblue.png" alt="Card back" width="160" height="240">
         </div>
-        <div id="player">
+        <div id="player" class="mainCard">
             <h5>Player</h5>
-            <img src="6ofspades.png" alt="Six of spades" width="160" height="240">
+            <img class="card" src="cardbackblue.png" alt="Six of spades" width="160" height="240">
         </div>
-        <div id="computer">
+        <div id="computer" class="mainCard">
             <h5>Computer</h5>
-            <img src="cardbackblue.png" alt="Card back" width="160" height="240">
+            <img class="card" src="cardbackblue.png" alt="Card back" width="160" height="240">
         </div>
-        <div id="discard">
+        <div id="discard" class="mainCard">
             <h5>Discard</h5>
-            <img src="3ofhearts.png" alt="Three of hearts" width="160" height="240">
+            <img src="cardbackblue.png" alt="Three of hearts" width="160" height="240">
         </div>
+        <div id="played" class="mainCard"><strong>Played!</strong></div>
 
+        <div id="buttons" class="mainCard">
+
+            <button type="button" class="newgame">New Game</button>
+            <button type="button" class="pause">Pause</button>
+            <button type="button" class="save">Save</button>
+
+
+        </div>
 
     </main>
 
-    <div id="buttons">
-
-        <button type="button">New Game</button>
-        <button type="button">Pause</button>
-        <button type="button">Save</button>
-
-
-    </div>
+    
 
     <div id="table">
 
@@ -72,17 +80,17 @@
                     <td>Pontus</td>
                     <td>180910</td>
                     <td>98 points</td>
-                    <td><time>5:20 min</time></td>
+                    <td>5:20 min</td>
                 </tr>
                 <tr>
                     <td>Håkan</td>
                     <td>181001</td>
                     <td>78 points</td>
-                    <td><time>4:40 min</time></td>
+                    <td>4:40 min</td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <script src="JavaScript.js"></script>
+    <script src="jQuery.js"></script>
 </body>
 </html>
